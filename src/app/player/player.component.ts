@@ -11,7 +11,9 @@ export class PlayerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() :void {
+    // this.video = this.matVideo.getVideoTag();
+    // this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
+    // this.video.addEventListener('ended', () => console.log('video ended'));
   }
-
 }

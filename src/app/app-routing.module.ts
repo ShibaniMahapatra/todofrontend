@@ -5,9 +5,9 @@ import { ItemComponent } from './item/item.component';
 import { PlayerComponent } from './player/player.component';
 
 const routes: Routes = [
-  { path: 'item', component: ItemComponent 
-    // path: 'youtube',component: PlayerComponent}
-}
+  { path: 'item', component: ItemComponent },
+  { path: 'youtube',component: PlayerComponent}
+
 ];
 
 @NgModule({
