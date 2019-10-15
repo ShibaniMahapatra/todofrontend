@@ -7,6 +7,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material';
 // import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,19 +18,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { ItemComponent } from './item/item.component';
 import { MatVideoModule } from 'mat-video';
 import { PlayerComponent } from './player/player.component';
-
+import { ItemsComponent } from './items/items.component';
+import {DataService} from './data.service';
+  
 @NgModule({
   declarations: [
     AppComponent,
-    
+    ItemComponent,
     MainNavComponent,
     ItemComponent,
     PlayerComponent,
+    ItemsComponent,
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatSidenavModule,
     MatCardModule,
     LayoutModule,
@@ -40,7 +45,7 @@ import { PlayerComponent } from './player/player.component';
     MatVideoModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

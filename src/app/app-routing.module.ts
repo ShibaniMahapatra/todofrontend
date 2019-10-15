@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ItemComponent } from './item/item.component';
 import { PlayerComponent } from './player/player.component';
+import { ItemsComponent} from './items/items.component';
 
 const routes: Routes = [
-  { path: 'item', component: ItemComponent },
+  { path: 'items', component: ItemsComponent },
   { path: 'youtube',component: PlayerComponent}
 
 ];
