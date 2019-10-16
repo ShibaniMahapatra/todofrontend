@@ -8,6 +8,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material';
 // import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
+import { ItemEditModalComponent } from './item-edit-modal/item-edit-modal.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,34 +21,38 @@ import { MatVideoModule } from 'mat-video';
 import { PlayerComponent } from './player/player.component';
 import { ItemsComponent } from './items/items.component';
 import {DataService} from './data.service';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    ItemEditModalComponent,
     ItemComponent,
     MainNavComponent,
     ItemComponent,
     PlayerComponent,
-    ItemsComponent,
-    
-  ],
+    ItemsComponent
+],
   imports: [
-    MDBBootstrapModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatSidenavModule,
     MatCardModule,
     LayoutModule,
+    MatInputModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
     MatVideoModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule
   ],
   providers: [DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ItemEditModalComponent]
 })
 export class AppModule { }
