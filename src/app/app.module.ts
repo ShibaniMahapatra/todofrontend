@@ -20,7 +20,8 @@ import { MatVideoModule } from 'mat-video';
 import { PlayerComponent } from './player/player.component';
 import { ItemsComponent } from './items/items.component';
 import {DataService} from './data.service';
-  
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import {DataService} from './data.service';
     
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
