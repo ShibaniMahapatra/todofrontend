@@ -1,13 +1,13 @@
-<mat-card class="example-card" (click)="openDialog()">
-    <mat-card-header>
-      <mat-card-title>{{item.title}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        
-        {{item.description}}
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{item.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{item._id}}
+    </p>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="openDialog()">edit</mat-icon>
 
-      </p>
-    </mat-card-content>
-  </mat-card>
-  
+    <button class="delete" title="delete item" (click)="delete()">x</button>
+  </mat-card-content>
+</mat-card>

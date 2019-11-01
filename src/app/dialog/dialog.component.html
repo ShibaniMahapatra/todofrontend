@@ -1,18 +1,59 @@
-<h1 mat-dialog-title>Hi {{data.name.title}} </h1>
+<h1 mat-dialog-title>{{data.title}} </h1>
 <div>
   <!-- <label>name:
-    <!-- <input  placeholder="{{data.name.title}}"/>
+     <input  placeholder="{{data.name.title}}"/>
     <input ng-model="name" ng-init="name ='{{data.name.title}'"></input> -->
 
-  <!-- </label> --> 
+  <!-- </label> -->
+  <!-- <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input name="first" ngModel required #first="ngModel">
+      <input name="last" ngModel>
+      <button>Submit</button>
+    </form> -->
 
-  <label>Title:
-    <!-- <input [(ngModel)]="name" placeholder="{{data.name.title}}"/> -->
-    <!-- <input ng-model="data.name.title"  ng-init='This is a string'>    -->
-    <mat-form-field class="example-full-width">
-      <input matInput  value="{{data.name.title}}">
-    </mat-form-field>
+  <!-- <p>First name value: {{ first.value }}</p>
+    <p>First name valid: {{ first.valid }}</p>
+    <p>Form value: {{ f.value | json }}</p>
 
-  </label>
- 
+    <p>Form valid: {{ f.valid }}</p>   -->
+
+
+  <form #f="ngForm" (ngSubmit)="onSave(f)"  novalidate>
+    <label>Title:
+      <mat-form-field class="example-full-width">
+        <input matInput name="title" ng-model="searchText" type="text" ng-init="searchText='your text'">
+      </mat-form-field>
+
+
+    </label>
+    <label>Description:
+      <mat-form-field class="example-full-width">
+        <input matInput name="description" ngModel value="{{data.description}}">
+      </mat-form-field>
+    </label>
+
+    <label>Created:
+      <mat-form-field class="example-full-width">
+        <input matInput name="created" ngModel value="{{data.created}}">
+      </mat-form-field>
+    </label>
+
+    <label>Scheduled:
+      <mat-form-field class="example-full-width">
+        <input matInput name="scheduled" ngModel value="{{data.scheduled}}">
+      </mat-form-field>
+    </label>
+    <label>Last Updated:
+      <mat-form-field class="example-full-width">
+        <input matInput name="lastupdated" ngModel value="{{data.lastupdated}}">
+      </mat-form-field>
+    </label>
+    <label>Completed:
+        <mat-form-field class="example-full-width">
+          <input matInput name="completed" ngModel value="{{data.completed}}">
+        </mat-form-field>
+      </label>
+
+    <button type="submit" mat-raised-button >Submit</button>
+  </form>
 </div>
