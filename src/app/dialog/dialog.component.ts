@@ -25,15 +25,26 @@ export class DialogComponent implements OnInit {
     let inputvalue;
     console.log("HI");
     // console.log(this.title);
-    console.log(f);
+    // console.log(f);
     console.log(f.value);
     // console.log(f.title.value);
 
 
-    // console.log(this.data["_id"]);
-    this.dataService.sendPutRequest(this.data["_id"], f.value).subscribe((data: any[]) => {
-      console.log("data",typeof(data["data"]));
-      // this.products = (data["data"]);
-    })
+    // console.log(this.data["_i"d"]);
+    console.log(f.value["_id"])
+    if(this.data["_id"]==null)
+    {
+      this.dataService.sendPostRequest(f.value).subscribe((data: any[]) => {
+        console.log("data",typeof(data["data"]));
+        // this.products = (data["data"]);
+      })
+    }
+    else{
+      this.dataService.sendPutRequest(this.data["_id"], f.value).subscribe((data: any[]) => {
+        console.log("data",typeof(data["data"]));
+        // this.products = (data["data"]);
+      })
+    }
+    
 }
 }

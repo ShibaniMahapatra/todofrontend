@@ -30,6 +30,8 @@ export class ItemComponent implements OnInit {
     this.dataService.sendDeleteRequest(this.item["_id"]).subscribe((data: any[]) => {
       // console.log("data",typeof(data["data"]));
       // this.products = (data["data"]);
+      error => console.log('oops', error);
+
     })
   }
 

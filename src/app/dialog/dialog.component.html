@@ -21,36 +21,36 @@
   <form #f="ngForm" (ngSubmit)="onSave(f)"  novalidate>
     <label>Title:
       <mat-form-field class="example-full-width">
-        <input matInput name="title" ng-model="searchText" type="text" ng-init="searchText='your text'">
+        <input matInput name="title" ngModel="{{data.title}}" >
       </mat-form-field>
 
 
     </label>
     <label>Description:
       <mat-form-field class="example-full-width">
-        <input matInput name="description" ngModel value="{{data.description}}">
+        <input matInput name="description" ngModel="{{data.description}}">
       </mat-form-field>
     </label>
 
     <label>Created:
       <mat-form-field class="example-full-width">
-        <input matInput name="created" ngModel value="{{data.created}}">
+        <input matInput name="created" ngModel="{{data.created}}">
       </mat-form-field>
     </label>
 
     <label>Scheduled:
       <mat-form-field class="example-full-width">
-        <input matInput name="scheduled" ngModel value="{{data.scheduled}}">
+        <input matInput name="scheduled" ngModel="{{data.scheduled}}">
       </mat-form-field>
     </label>
     <label>Last Updated:
       <mat-form-field class="example-full-width">
-        <input matInput name="lastupdated" ngModel value="{{data.lastupdated}}">
+        <input matInput name="lastupdated" ngModel="{{data.lastupdated}}">
       </mat-form-field>
     </label>
     <label>Completed:
         <mat-form-field class="example-full-width">
-          <input matInput name="completed" ngModel value="{{data.completed}}">
+          <input matInput name="completed" ngModel="{{data.completed}}">
         </mat-form-field>
       </label>
 

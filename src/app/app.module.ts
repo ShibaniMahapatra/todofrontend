@@ -11,6 +11,8 @@ import { MatCardModule,MatFormFieldModule ,MatInputModule} from '@angular/materi
 import { HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule} from '@angular/material';
+import { NotifierModule } from "angular-notifier";
+import { NotifierService } from "angular-notifier";
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,7 +29,7 @@ import {DataService} from './data.service';
 import { DialogpageComponent } from './dialogpage/dialogpage.component';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { PostdialogComponent } from './postdialog/postdialog.component';
+import { YoutubeComponent } from './youtube/youtube.component';
 
   
 @NgModule({
@@ -40,7 +42,7 @@ import { PostdialogComponent } from './postdialog/postdialog.component';
     ItemsComponent,
     DialogpageComponent,
     DialogComponent,
-    PostdialogComponent,
+    YoutubeComponent
     
   ],
   entryComponents: [DialogComponent],
@@ -61,7 +63,8 @@ import { PostdialogComponent } from './postdialog/postdialog.component';
     FormsModule,
     MatVideoModule,
     AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    NotifierModule
 
   ],
   exports: [
